@@ -1,0 +1,9 @@
+[Unit]
+Description=Phosphor Console Muxer
+
+[Service]
+ExecStart={sbindir}/obmc-console-server ttyS0
+Restart=always
+
+[Install]
+WantedBy={SYSTEMD_DEFAULT_TARGET}

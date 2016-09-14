@@ -22,9 +22,11 @@ RDEPENDS_${PN} += "network"
 RDEPENDS_${PN} += "libmapper"
 SRC_URI += "git://github.com/openbmc/phosphor-host-ipmid"
 
-SRCREV = "37af73315c3e1ff504db466b10e6269cc56dcc6c"
+SRCREV = "70aa8d9677b13eb97e71bc758a09e14e37053565"
 
 S = "${WORKDIR}/git"
 
 FILES_${PN}_append = " ${libdir}/host-ipmid/lib*${SOLIBS}"
 FILES_${PN}-dev_append = " ${libdir}/host-ipmid/lib*${SOLIBSDEV} ${libdir}/host-ipmid/*.la"
+
+DBUS_SERVICE_${PN} += "org.openbmc.HostServices.service"

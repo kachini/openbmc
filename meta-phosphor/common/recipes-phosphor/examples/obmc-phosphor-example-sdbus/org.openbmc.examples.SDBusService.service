@@ -1,0 +1,9 @@
+[Unit]
+Description=Phosphor SDBus Application Example
+
+[Service]
+Restart=always
+ExecStart={sbindir}/obmc-phosphor-example-sdbus
+
+[Install]
+WantedBy={SYSTEMD_DEFAULT_TARGET}
